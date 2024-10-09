@@ -13,10 +13,10 @@ return {
 				null_ls.builtins.formatting.gofumpt,
 				null_ls.builtins.formatting.black,
 				require("none-ls.diagnostics.eslint_d"),
-			},
+			}
 		})
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			desc = "Autoformat on write",
+		vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+			desc = "Autoformat on write, insert mode enter or leave",
 			callback = function()
 				vim.lsp.buf.format()
 			end,

@@ -4,7 +4,7 @@ vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 
 vim.opt.cmdheight = 0
-vim.opt.conceallevel= 0 
+vim.opt.conceallevel = 0
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
@@ -14,6 +14,11 @@ vim.opt.undofile = true
 vim.opt.updatetime = 400
 
 vim.opt.wrap = true
+vim.opt.breakindent = true
+
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+vim.opt.inccommand = 'split'
 
 vim.opt.scrolloff = 12
 vim.opt.sidescrolloff = 8
@@ -29,3 +34,5 @@ vim.opt.fillchars:append({ eob = ' ' })
 -- better wrapping option
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 
+vim.g.have_nerd_font = true
+vim.opt.showmode = false
