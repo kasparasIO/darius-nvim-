@@ -20,7 +20,7 @@ vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper win
 vim.keymap.set("n", "<leader>s", function() vim.cmd("vsplit") end, { desc = "[S]plit window to the right" })
 vim.keymap.set("n", "<leader>hs", function() vim.cmd("split") end, { desc = "[H]orizontally [S]plit window" })
 
-vim.keymap.set("n", "<M-k>", ":resize +2<CR>", { desc = "Increase split height" })
-vim.keymap.set("n", "<M-j>", ":resize -2<CR>", { desc = "Decrease split height" })
-vim.keymap.set("n", "<M-h>", ":vertical resize -2<CR>", { desc = "Decrease split width" })
-vim.keymap.set("n", "<M-l>", ":vertical resize +2<CR>", { desc = "Increase split width" })
+vim.keymap.set("n", "<M-k>", ":resize +2<CR>", { desc = "Increase split height", noremap = true, silent = true  })
+vim.keymap.set("n", "<M-j>", ":resize -2<CR>", { desc = "Decrease split height",noremap = true, silent = true   })
+vim.keymap.set("n", "<M-h>", ":vertical resize -2<CR>", { desc = "Decrease split width", noremap = true, silent = true  })
+vim.keymap.set("n", "<M-l>", ":vertical resize +2<CR>", { desc = "Increase split width", noremap = true, silent = true  })
