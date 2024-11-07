@@ -2,3 +2,4 @@
 require("darius")
 -- setup plugin manager and plugins
 require("lazy-nvim")
+
