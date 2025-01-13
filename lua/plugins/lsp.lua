@@ -18,18 +18,17 @@ return {
   },
   { "Bilal2453/luvit-meta", lazy = true },
   { "hrsh7th/cmp-nvim-lsp" },
-
   {
     "pmizio/typescript-tools.nvim",
     dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
     opts = {},
   },
-
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "svelte", "eslint", "gopls", "pyright" }
+        ensure_installed = { "lua_ls", "svelte", "eslint_d", "gopls", "pyright", "prettierd" },
+        automatic_installation = true
       })
       require("mason-lspconfig").setup_handlers({
         --default handler

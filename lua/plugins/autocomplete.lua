@@ -1,6 +1,6 @@
 return {
   { "hrsh7th/cmp-path" },
-
+  { "hrsh7th/cmp-buffer" },
   {
     "hrsh7th/nvim-cmp",
     config = function()
@@ -9,11 +9,12 @@ return {
           vim.snippet.expand(args.body)
         end,
         sources = require("cmp").config.sources({
-          { name = "nvim_lsp" },
-          { name = "lazydev", group_index = 0 },
-        }, {
-          { name = "path" }
-        }),
+            { name = "nvim_lsp" },
+            { name = "lazydev", group_index = 0 },
+          },
+          {
+            { name = "path" }
+          }),
         window = {
           completion = require("cmp").config.window.bordered(),
           documentation = require("cmp").config.window.bordered(),
